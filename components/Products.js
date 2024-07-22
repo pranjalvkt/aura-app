@@ -2,6 +2,7 @@
 import Card from "@/components/Card";
 import prod from './prod.json'
 export default function Products() {
+    fetch('/api').then((response)=> response.json()).then((res)=>console.log(res))
     return (
         <>
             {
