@@ -1,8 +1,6 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
-const url = 'mongodb+srv://admin:admin@cluster0.s8ar2b8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-// process.env.MONGODB_URI
 
-const client = new MongoClient(url, {
+const client = new MongoClient(process.env.MONGODB_URI, {
     serverApi: {
       version: ServerApiVersion.v1,
       strict: true,

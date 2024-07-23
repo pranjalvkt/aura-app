@@ -12,12 +12,12 @@ export async function GET(request) {
   return NextResponse.json({ data: data });
 }
 
-export async function POST(request) {
-  const db = await connectToDatabase();
+// export async function POST(request) {
+//   const db = await connectToDatabase();
 
-  const collection = db.collection('products');
+//   const collection = db.collection('products');
   
-  const data = await collection.insertMany([{}]);
+//   const data = await collection.insertMany([{}]);
 
-  return NextResponse.json({ data: data });
-}
+//   return NextResponse.json({ data: data });
+// }
