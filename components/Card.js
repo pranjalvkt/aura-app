@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 let imgStr = `https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/`;
 
 function addToCart(pid) {
@@ -9,10 +7,7 @@ function addToCart(pid) {
 }
 
 export default function Card({ data }) {
-  const [reviewColor, setReviewColor] = useState('bg-yellow-400');
-  // if(data.avgRating > 4) {
-  //   setReviewColor('bg-green-400')
-  // }
+
   return (
     <div className="relative m-10 min-h-[550px] flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
       <a
@@ -46,7 +41,7 @@ export default function Card({ data }) {
             </span>
           </p>
           <div className="flex items-center">
-            <span className={(data.avgRating > 4 ? 'bg-green-800' : data.avgRating > 3 ? 'bg-green-500' : 'bg-yellow-400') + " mr-2 ml-3 rounded px-4 py-0.2 flex text-s font-semibold"}>
+            <span className={(data.avgRating > 4 ? 'bg-green-800' : data.avgRating > 3 ? 'bg-green-500' : 'bg-yellow-400') + " mr-2 ml-3 rounded px-4 py-0.2 flex text-s font-semibold text-slate-100"}>
               {data.avgRating}
               <svg
                 aria-hidden="true"
